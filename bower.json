@@ -1,0 +1,12 @@
+{
+  "name": "WayblazerRed",
+  "dependencies": {
+      "bootstrap": "3.3.5",
+      "bootstrap-social": "5.0.0",
+      "font-awesome": "4.5.0",
+      "angular": "1.5.6",
+      "angular-resource": "1.5.6",
+      "angular-route": "1.5.5",
+      "jquery": "2.2.4"
+  }
+}

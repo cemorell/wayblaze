@@ -1,0 +1,240 @@
+/* ------------------- Card Styling ------------------- */
+.programs, .card-reveal.programs {
+    background: #1565c0;
+    color: white;
+}
+
+/* Card Pargraph Styling */
+.card-content p {
+    padding: 0;
+}
+
+.card-content p a {
+    color: white;
+}
+
+/* Primary Card Title Styling */
+.card-title.activator {
+    font-size: 1.3em;
+}
+
+/* Icon Positioning */
+.card-title.activator > i {
+    padding-top: 0.5em;
+}
+
+/* Card-Reveal Title Styling */
+div.card-reveal > span.card-title {
+    font-size: 1.3em;
+}
+
+/* Card Paragraph Styling */
+.card-reveal > p {
+    padding: 0.8em 0 0.8em 0;
+    text-align: justify;
+}
+
+/* Collapsible Piece Styling */
+.collapsible-body > p {
+    padding: 0.5rem;
+}
+
+/* ------------------- Logo && NavBar ------------------- */
+
+.nav_plus_logo {
+    height: 125px;
+    width: 100%;
+    line-height: 125px;
+}
+
+nav {
+    position: relative;
+    margin-top: 60px;
+}
+
+img.logo {
+    position: absolute;
+    z-index: 1;
+    width: 220px;
+    top: 0;
+    margin-left: auto;
+    
+}
+
+@media screen and (max-width: 662px) {
+    img.logo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0%);
+    }
+        
+}
+
+/* ------------------- Cross-Fade Reviews Styling ------------------- */
+.cross-fade {
+    position: relative;
+    height: 255px;
+    text-align: justify;
+}
+
+.cross-fade h3 {
+    text-align: center;
+}
+
+.cross-fade .review {
+    position: absolute;
+    left: 0;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 1rem;
+    border-left: 5px solid #eee;
+    background: white;
+}
+
+blockquote p {
+    margin: 0 0 10px;
+}
+
+/* Dash Mark before Author of Quote*/
+.sub-review:before {
+    content: '\2014 \00A0'
+}
+
+.sub-review {
+    display: block;
+    font-size: 80%;
+    font-style: italic;
+    line-height: 1.42857143;
+    color: #777;
+}
+
+/* Controls Timing of Fades*/
+/* Formula
+
+--Definition of Terms--
+n = number of images
+a = presentation time for 1 image
+b = transition duration
+t = total animation duration ** [ t = (a+b)*n ]
+
+    1. 0%
+    2. a/t*100%
+    3. (a+b)/t*100% = 1/n*100%
+    4. 100%-(b/t*100%)
+    5. 100%
+*/
+@keyframes cross-fade-IO {
+     0% {
+         opacity: 1;
+     }
+     26.7% {
+         opacity: 1;
+     }
+     33.33% {
+         opacity: 0;
+     }
+     93.34% {
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+     }
+}
+
+.review {
+    animation-name: cross-fade-IO;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+}
+
+/* Animation Delay = (animation-duration - a+b) */
+.review:nth-of-type(1) {
+    animation-delay: 20s;
+}
+
+.review:nth-of-type(2) {
+    animation-delay: 10s;
+}
+
+.review:nth-of-type(3) {
+    animation-delay: 0;
+}
+
+
+/* ------------------- "What About" Section Styling ------------------- */
+.wa {
+    background: #1565c0;
+    margin: 2px 0 0 0;
+}
+
+.wa:hover {
+    background: #eeeeee;
+    color: #1565c0;
+    font-weight: 500;
+}
+
+.what-about {
+    text-align: center;
+}
+
+/* ------------------- Footer Styling ------------------- */
+#bottom-of-page-footer {
+    background: #b71c1c;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+/* Align the "Contact Us" Text in the Center of the Footer */
+#contact-me {
+    text-align: center;
+}
+
+.contact-head {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* Decrease Spacing between Icons*/
+#contact-me div div.col {
+    padding: 0;
+}
+
+.contact-icons {
+    display: inline-flex;
+}
+
+.contact-icons div {
+    margin-right: 5px;
+}
+
+/* Creates the fixed size of the buttons */
+.facebook-icon, .twitter-icon {
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+}
+
+/* Centers the logo of the bootstrap icon */
+.facebook-icon i, .twitter-icon i {
+    margin-top: 5%;
+}
+
+/* Footer Copyright Formatting */
+
+.contain {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-bottom: 2%;
+}
