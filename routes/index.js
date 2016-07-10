@@ -15,14 +15,15 @@ router.get('/api/search', function(req, res, next) {
 	    },
 	    url: 'https://api.wayblazer.com/v1/accommodations/search?adults=1&children=2&rooms=1&destination=Austin,TX&startDate=2016-10-06&endDate=2016-10-10&getPricing=true',
 	    method: 'GET'
-	  }, function (err, res, body) {
+	  }, function (err, response, body) {
   		console.log({body: body});
-  		return body;
+  		var body_json = JSON.parse(body);
+  		res.json(body_json.accommodations);
+  		//return body;
     //it works!
   });
 
 
- res.render('index', { title: "Frank"});
 // 	var options = {
 // 	  host: 'api.wayblazer.com',
 // 	  port: 443,
