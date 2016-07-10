@@ -1,10 +1,10 @@
 <div ng-controller="FeedController">
-    
+
    <!-- <div class="container">
         <input type="text" ng-model="dataCategory">
     </div>-->
-    
-    
+
+
     <div class="row container">
         <div class="col s8 push-s2" ng-repeat="activity in feeder | filter: dataCategory">
             <div class="card">
@@ -13,7 +13,7 @@
                         <li style="text-align: right;"><strong>avgJoe27</strong></li>
                         <li style="font-weight: 300;">Melbourne, Australia</li>
                     </ul>
-                    <img src="/app/images/{{activity.image}}">
+                    <img src="/images/{{activity.image}}">
                     <ul>
                         <li class="card-title">{{activity.title}}</li>
                     </ul>
