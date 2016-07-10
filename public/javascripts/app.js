@@ -21,4 +21,9 @@ $(document).ready(function () {
 
 		})
 	});
+
+  $('.snowboarding-button').on('click', function(e){
+    e.preventDefault();
+    window.location.replace('/form');
+  })
 });
