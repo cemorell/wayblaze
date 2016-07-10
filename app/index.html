@@ -16,22 +16,22 @@
     
     <!--Materialize UI-->
     <!-- Controls the use of material-icons class-->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
      <!-- MaterializeCSS and MaterializeJS -->
-    <!-- <link href="../bower_components/materialize/dist/css/materialize.min.css" rel="stylesheet">
-    <script src="../bower_components/materialize/dist/js/materialize.min.js"></script> -->
+     <link href="../bower_components/materialize/dist/css/materialize.min.css" rel="stylesheet">
+     <script src="../bower_components/materialize/dist/js/materialize.min.js"></script> 
     
     <!--Bootstrap Social & Font Awesome -->
-    <!-- <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet"> -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet"> 
     
     <!-- Proprietary Styling -->
     <link href="stylesheets/index.css" rel="stylesheet">
     
     <!-- EmojiOne -->
-    <!-- <link href="/bower_components/emojione/assets/css/emojione.min.css" rel="stylesheet">
-    <link href="/bower_components/emojione/assets/css/emojione-awesome.css" rel="stylesheet"> -->
+    <link href="/bower_components/emojione/assets/css/emojione.min.css" rel="stylesheet">
+    <link href="/bower_components/emojione/assets/css/emojione-awesome.css" rel="stylesheet"> 
    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,10 +43,62 @@
 
 <body>
     
+    <!-- Nav Bar -->
+    <nav>
+        <div>
+            <div class="logo">
+                <strong>Adventure</strong><span>Seeker</span>
+            </div>
+        </div>
+        <div>
+            <div class="e1a-2x e1a-thought_balloon"></div>
+            <div class="e1a-2x e1a-checkered_flag"></div>
+            <div class="e1a-2x e1a-airplane"></div>
+            <div class="e1a-2x e1a-motorcycle"></div>
+        </div>
+        
+        
+    
+    </nav>
+    
     <div>
         <div ng-view></div>
     </div>
-       
+    
+    <!-- Footer -->
+    <footer id="bottom-of-page-footer" class="white-text">
+        <div class="contain">
+            <div class="row">
+                <div id="contact-me">
+                    <div class="contact-head">Contact Us!</div>
+                    <div class="contact-icons">
+                        <div class="col s3 m12 l12 tooltip" data-tooltip="(512) 302 5425">
+                            <a class="btn-floating blue darken-2"  href="tel:+15123025425"><i class="material-icons">phone</i></a>
+                        </div>
+                        <div class="col s3 m12 l12 tooltip" data-tooltip="thirdcoastmartialarts@sbcglobal.net">
+                            <a class="btn-floating blue darken-2" href="mailto:thirdcoastmartialarts@sbcglobal.net"><i class="material-icons">email</i></a>
+                        </div>
+                        <div class="col s3 m12 l12">
+                            <a class="hoverable btn btn-social-icon btn-facebook facebook-icon" href="https://www.facebook.com/pages/Third-Coast-Martial-Arts/453781461474396" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="col s3 m12 l12">
+                            <a class="hoverable btn btn-social-icon btn-twitter twitter-icon" href="http://www.twitter.com/TCMA1" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            © 2016 AdventureSeeker | All Rights Reserved
+        </div>
+    
+    </footer>
+    
+    
     <!-- AngularJS & Angular Route -->
     <script src="../bower_components/angular/angular.min.js"></script>
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
@@ -57,10 +109,14 @@
     
     <!-- Controllers -->
     <script src="/app/js/controllers/HomeController.js"></script>
+    <script src="/app/js/controllers/FeedController.js"></script>
+    
+    <!-- Services -->
+    <script src="js/services/DataService.js"></script>
     
     <!-- Materialize jQuery -->
-   <!--  <script src="../bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="../bower_components/jquery-validation/dist/additional-methods.min.js"></script> -->
+    <script src="../bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../bower_components/jquery-validation/dist/additional-methods.min.js"></script> 
     
     <!--One Page Scroll-->
     <!--script src="https://kswedberg.github.io/jquery-smooth-scroll/lib/jquery/jquery.js"></script>

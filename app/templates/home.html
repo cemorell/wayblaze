@@ -1,10 +1,36 @@
 <div ng-controller="HomeController">
 
 
-
-
-
-
+    <div class="parallax-container">
+        <div class="parallax"><img src="/app/images/timeforanadventure.jpg"></div>
+    </div> 
+    
+    <div class="row container">
+        <h4>Explore New Places with New Adventures</h4>
+        <p>Where will you go next? And what will you do once you get there?</p>
+        
+        <div class="row">
+            <div class="col s6" ng-repeat="activity in activities">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/app/images/{{activity.image}}">
+                        <span class="card-title">{{activity.title}}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{activity.content}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a class="btn" href="#/newsfeed" ng-click="select({{activity.type}})"></a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="container">
+        <input type="text" ng-model="dataCategory">
+    </div>
+    
 
 </div>
 

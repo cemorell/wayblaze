@@ -1,8 +1,4 @@
 /* ------------------- Card Styling ------------------- */
-.programs, .card-reveal.programs {
-    background: #1565c0;
-    color: white;
-}
 
 /* Card Pargraph Styling */
 .card-content p {
@@ -14,61 +10,36 @@
 }
 
 /* Primary Card Title Styling */
-.card-title.activator {
-    font-size: 1.3em;
+
+.card-title {
+    font-size: 1em!important;
+    background: orange;
+    left: 10px!important;
+    bottom: 10px!important;
+    padding: 5px!important;
+    opacity: 0.7;
 }
 
-/* Icon Positioning */
-.card-title.activator > i {
-    padding-top: 0.5em;
+.card-image img {
+    height: 175px;
 }
 
-/* Card-Reveal Title Styling */
-div.card-reveal > span.card-title {
-    font-size: 1.3em;
+/* ------------------- NavBar ------------------- */
+
+.logo {
+    font-size: 2.5em;
+    text-align: center;
+    background: white;
+    color: orange;
 }
 
-/* Card Paragraph Styling */
-.card-reveal > p {
-    padding: 0.8em 0 0.8em 0;
-    text-align: justify;
+.logo span {
+    font-weight: 300;
 }
 
-/* Collapsible Piece Styling */
-.collapsible-body > p {
-    padding: 0.5rem;
-}
-
-/* ------------------- Logo && NavBar ------------------- */
-
-.nav_plus_logo {
-    height: 125px;
-    width: 100%;
-    line-height: 125px;
-}
-
-nav {
-    position: relative;
-    margin-top: 60px;
-}
-
-img.logo {
-    position: absolute;
-    z-index: 1;
-    width: 220px;
-    top: 0;
-    margin-left: auto;
-    
-}
-
-@media screen and (max-width: 662px) {
-    img.logo {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translate(-50%, 0%);
-    }
-        
+/* ------------------- Parallax Styling ------------------- */
+.parallax-container {
+      height: 400px;
 }
 
 /* ------------------- Cross-Fade Reviews Styling ------------------- */
@@ -166,34 +137,20 @@ t = total animation duration ** [ t = (a+b)*n ]
 }
 
 
-/* ------------------- "What About" Section Styling ------------------- */
-.wa {
-    background: #1565c0;
-    margin: 2px 0 0 0;
-}
-
-.wa:hover {
-    background: #eeeeee;
-    color: #1565c0;
-    font-weight: 500;
-}
-
-.what-about {
-    text-align: center;
-}
-
 /* ------------------- Footer Styling ------------------- */
 #bottom-of-page-footer {
-    background: #b71c1c;
+    background: white;
     width: 100%;
     padding-top: 10px;
     margin-bottom: 0;
     margin-left: 0;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 /* Align the "Contact Us" Text in the Center of the Footer */
 #contact-me {
     text-align: center;
+    color: orange;
 }
 
 .contact-head {
@@ -237,4 +194,5 @@ t = total animation duration ** [ t = (a+b)*n ]
 .footer-copyright {
     text-align: center;
     padding-bottom: 2%;
+    color: orange;
 }
