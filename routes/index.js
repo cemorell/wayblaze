@@ -13,7 +13,7 @@ router.get('/api/search', function(req, res, next) {
 	    headers: {
 	      'x-api-key': '0MLahliXwx1eePqvVdbib7mDmQCb4OYj79o4kCjf'
 	    },
-	    url: 'https://api.wayblazer.com/v1/accommodations/search?adults=1&children=2&rooms=1&destination=Austin,TX&startDate=2016-10-06&endDate=2016-10-10&getPricing=true',
+	    url: 'https://api.wayblazer.com/v1/accommodations/search?adults=1&children=2&rooms=1&destination=Austin,TX&startDate=2016-09-09&endDate=2016-10-10&getPricing=true',
 	    method: 'GET'
 	  }, function (err, response, body) {
   		console.log({body: body});
