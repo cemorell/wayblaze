@@ -19,7 +19,6 @@ router.get('/api/search', function(req, res, next) {
   		console.log({body: body});
   		var body_json = JSON.parse(body);
   		res.json(body_json.accommodations);
-  		//return body;
     //it works!
   });
 });
@@ -28,7 +27,12 @@ router.get('/form', function (req, res, next) {
 	res.render('form');
 });
 
+router.post('/show', function (req, res, next) {
+	console.log({req: req.body});
+});
+
 router.get('/show', function (req, res, next) {
+
 	res.render('show');
 });
 
