@@ -2,7 +2,7 @@ $(document).ready(function () {
 	$(".ajax-test").on("click", function () {
 		$.ajax({
 			url: "/api/search",
-			type: "GET",
+			method: "GET",
 			dataType: "json",
 			success: function (data) {
 				console.log({
