@@ -1,0 +1,65 @@
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/javascripts/app.js"></script>
+</head>
+
+<h1> Hotels near your destination </h1>
+
+
+<script>
+	$(document).ready(function () {
+		$.ajax({
+			url: "/api/search",
+			method: "GET",
+			dataType: "json",
+			success: function (data) {
+
+				$(".hotel-name").text(data[0]['attraction']['name']);
+				$(".hotel-address").text(data[0]['attraction']['location']['address1']);
+				$(".hotel-city").text(data[0]['attraction']['location']['city']);
+				$(".hotel-state").text(data[0]['attraction']['location']['stateProvince']);
+
+				$(".hotel-name-2").text(data[1]['attraction']['name']);
+				$(".hotel-address-2").text(data[1]['attraction']['location']['address1']);
+				$(".hotel-city-2").text(data[1]['attraction']['location']['city']);
+				$(".hotel-state-2").text(data[1]['attraction']['location']['stateProvince']);
+
+
+			},
+			error: function (XMLHttpRequest, textStatus, errorThrown) {
+				console.log({
+					errorThrown: errorThrown,
+					XMLHttpRequest: XMLHttpRequest,
+					textStatus: textStatus
+				});
+
+			}
+
+		})
+
+	});
+
+</script>
+
+<div class="hotel-container">
+	<p>
+		<strong>Name: </strong><span class="hotel-name"></span>
+	</p>
+	<p>
+		<strong>Address: </strong><br />
+		<span class="hotel-address"></span><br />
+		<span class="hotel-city"></span><br />
+		<span class="hotel-state"></span>
+	</p>
+	<br />
+
+	<p>
+		<strong>Name: </strong><span class="hotel-name-2"></span>
+	</p>
+	<p>
+		<strong>Address: </strong><br />
+		<span class="hotel-address-2"></span><br />
+		<span class="hotel-city-2"></span><br />
+		<span class="hotel-state-2"></span>
+	</p>
+</div>
