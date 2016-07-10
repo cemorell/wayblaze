@@ -3,11 +3,12 @@
 	<script src="/javascripts/app.js"></script>
 </head>
 
-<h1> Hotels near your destination </h1>
+<!-- <h1> Hotels near your destination </h1> -->
 
 
 <script>
 	$(document).ready(function () {
+		window.location.replace('http://demo.wayblazer.com/accommodations/search?destination=Boulder,%20CO&adults=4&children=0&rooms=1&startDate=2016-12-07&endDate=2016-12-15&concepts=snowboarding&page=1');
 		$.ajax({
 			url: "/api/search",
 			method: "GET",
@@ -41,7 +42,7 @@
 
 </script>
 
-<div class="hotel-container">
+<!--  <div class="hotel-container">
 	<p>
 		<strong>Name: </strong><span class="hotel-name"></span>
 	</p>
@@ -62,4 +63,4 @@
 		<span class="hotel-city-2"></span><br />
 		<span class="hotel-state-2"></span>
 	</p>
-</div>
+</div> -->
